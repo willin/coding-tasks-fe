@@ -82,5 +82,5 @@ export default {
 </script>
 
 <style lang="stylus">
-  @import './stylus/main'
+  @import '../node_modules/vuetify/src/stylus/main'
 </style>
