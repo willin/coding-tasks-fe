@@ -13,6 +13,9 @@
         <v-icon>poll</v-icon>
       </v-btn>
     </v-toolbar>
+    <main>
+      <router-view></router-view>
+    </main>
   </v-app>
 </template>
 
@@ -35,3 +38,4 @@ export default {
   }
 };
 </script>
+

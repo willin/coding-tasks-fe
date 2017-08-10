@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import layout from '../component/layout.vue';
 import quadrant from '../component/quadrant';
+import timeline from '../component/timeline';
+import statistics from '../component/statistics';
 
 Vue.use(Router);
 
@@ -22,12 +24,12 @@ const router = new Router({
         {
           path: '/timeline/(.*)?',
           name: '时间轴视图',
-          component: quadrant
+          component: timeline
         },
         {
           path: '/statistics/(.*)?',
           name: '任务统计',
-          component: quadrant
+          component: statistics
         }
       ]
     }
