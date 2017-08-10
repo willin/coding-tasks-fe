@@ -5,7 +5,7 @@
     <v-toolbar>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn icon @click="goRoute('/')">
+      <v-btn icon @click="goRoute('/quadrant')">
         <v-icon>pages</v-icon>
       </v-btn>
       <v-btn icon @click="goRoute('/timeline')">
