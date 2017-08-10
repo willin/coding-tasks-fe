@@ -1,6 +1,8 @@
 <template>
   <v-app light>
-    <v-toolbar fixed>
+    <v-progress-linear value="45" height="10" info>
+    </v-progress-linear>
+    <v-toolbar>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon @click="goRoute('/')">
