@@ -1,18 +1,10 @@
-const state = {
-  user: [],
-  team: [],
-  project: [],
-  label: [],
-  task: []
-};
-
 /* eslint-disable no-param-reassign */
 const mutations = {
-  fetched(ctx, data) {
+  fetched(state, data) {
     Object.keys(data).forEach((key) => {
-      ctx[key] = data[key];
+      state[key] = data[key];
     });
   }
 };
 
-module.exports = { state, mutations };
+export default mutations;
