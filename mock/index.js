@@ -1,8 +1,8 @@
-const label = require('../mock/label');
-const project = require('../mock/project');
-const task = require('../mock/task');
-const team = require('../mock/team');
-const user = require('../mock/user');
+const label = require('./label');
+const project = require('./project');
+const task = require('./task');
+const team = require('./team');
+const user = require('./user');
 
 module.exports = (app) => {
   app.get('/api/label', (req, res) => {

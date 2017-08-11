@@ -4,7 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = require('./webpack.config');
-const setup = require('./mock');
+const setup = require('../mock');
 
 module.exports = Object.assign({}, config, {
   devServer: {
