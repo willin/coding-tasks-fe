@@ -1,8 +1,6 @@
 <template>
   <v-app light>
-    <v-progress-linear value="45" height="10" info>
-    </v-progress-linear>
-    <v-toolbar>
+    <v-toolbar fixed>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn icon @click="goRoute('/quadrant')">
@@ -18,6 +16,8 @@
     <main>
       <router-view></router-view>
     </main>
+    <v-progress-linear value="45" height="10" info>
+    </v-progress-linear>
   </v-app>
 </template>
 
@@ -42,8 +42,13 @@ export default {
 </script>
 
 <style lang="stylus">
-  @import '../node_modules/vuetify/src/stylus/main'
-  .progress-linear{
-    margin 0 !important
-  }
+@import '../node_modules/vuetify/src/stylus/main'
+.progress-linear{
+  margin 0 !important
+  position fixed
+  bottom 0
+  left 0
+}
+main
+  padding-bottom 10px
 </style>

@@ -25,4 +25,11 @@ export default {
 .box
   width 49%
   height 49%
+
+@media only screen and (max-device-width: 768px)
+  .flex
+    height auto;
+  .box
+    height calc(100vh - 74px)
+    width 100%
 </style>
