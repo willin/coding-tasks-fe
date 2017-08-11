@@ -12,6 +12,7 @@
       "polyfill": false,
       "regenerator": true,
       "moduleName": "babel-runtime"
-    }]
+    }],
+    "transform-object-rest-spread"
   ]
 }

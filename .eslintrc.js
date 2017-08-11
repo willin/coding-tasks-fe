@@ -1,8 +1,8 @@
 module.exports = {
   root: true,
   extends: [
-    'dwing',
-    'plugin:vue/recommended'
+    'plugin:vue/recommended',
+    'dwing'
   ],
   rules: {
     'global-require': 0,

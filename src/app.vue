@@ -22,16 +22,27 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   data() {
     return {
       title: this.$route.name
     };
   },
+  created() {
+    this.init();
+  },
   methods: {
+    async init() {
+      await this.fetch();
+    },
     goRoute(route) {
       this.$router.push(route);
-    }
+    },
+    ...mapActions({
+      fetch: 'getAllData'
+    })
   },
   watch: {
     $route() {
