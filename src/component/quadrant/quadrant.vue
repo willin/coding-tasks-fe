@@ -9,21 +9,7 @@
           <v-icon class="coding icon important"></v-icon>
           <v-icon class="coding icon important"></v-icon>
         </v-toolbar>
-        <v-list two-line>
-          <template v-for="task in tasksp3">
-            <v-subheader v-if="task.content" v-text="task.content" :key="task.id"></v-subheader>
-            <v-divider v-else-if="task.divider" v-bind:inset="task.inset" :key="task.id"></v-divider>
-            <v-list-tile avatar v-else v-bind:key="task.content" href="javascript:;" download target="_blank">
-              <v-list-tile-avatar>
-                <img v-bind:src="task.avatar">
-              </v-list-tile-avatar>
-              <v-list-tile-content>
-                <v-list-tile-title v-html="task.title"></v-list-tile-title>
-                <v-list-tile-sub-title v-html="task.subtitle"></v-list-tile-sub-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-        </v-list>
+        <tasks :list="tasksp3"></tasks>
       </v-card>
     </div>
     <div class="box">
@@ -35,6 +21,7 @@
           <v-icon class="coding icon important"></v-icon>
           <v-icon class="coding icon"></v-icon>
         </v-toolbar>
+        <tasks :list="tasksp2"></tasks>
       </v-card>
     </div>
     <div class="box">
@@ -46,6 +33,7 @@
           <v-icon class="coding icon"></v-icon>
           <v-icon class="coding icon"></v-icon>
         </v-toolbar>
+        <tasks :list="tasksp1"></tasks>
       </v-card>
     </div>
     <div class="box">
@@ -57,6 +45,7 @@
           <v-icon class="coding icon"></v-icon>
           <v-icon class="coding icon"></v-icon>
         </v-toolbar>
+        <tasks :list="tasksp0"></tasks>
       </v-card>
     </div>
   </div>
@@ -64,6 +53,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import tasks from './tasks.vue';
 
 export default {
   data() {
@@ -71,12 +61,24 @@ export default {
 
     };
   },
+  components: {
+    tasks
+  },
   computed: {
     ...mapGetters([
       'tasks'
     ]),
     tasksp3() {
       return this.tasks.filter(t => t.priority === 3).slice(0, 20);
+    },
+    tasksp2() {
+      return this.tasks.filter(t => t.priority === 2).slice(0, 20);
+    },
+    tasksp1() {
+      return this.tasks.filter(t => t.priority === 1).slice(0, 20);
+    },
+    tasksp0() {
+      return this.tasks.filter(t => t.priority === 0).slice(0, 20);
     }
   }
 };

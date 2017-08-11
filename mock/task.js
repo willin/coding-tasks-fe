@@ -11,7 +11,7 @@ const data = Mock.mock({
   'data|1000': [
     {
       'id|+1': 3000000,
-      'numer|1-300': 1,
+      'number|1-300': 1,
       'creator_id|1': uids,
       deadline() {
         if (this.id % 2 === 0) {
