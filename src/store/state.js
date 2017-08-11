@@ -3,7 +3,8 @@ const state = {
   team: [],
   project: [],
   label: [],
-  task: []
+  task: [],
+  tasklabels: []
 };
 
 export default state;

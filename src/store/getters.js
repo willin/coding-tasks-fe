@@ -1,9 +1,9 @@
 const getters = {
-  tasks: state => state.task.sort((prev, next) =>
-    (prev.deadline > next.deadline ? 1 : -1)
-  ),
+  tasks: state => state.task,
   users: state => state.user,
-  projects: state => state.project
+  projects: state => state.project,
+  labels: state => state.label,
+  tasklabels: state => state.tasklabels
 };
 
 export default getters;

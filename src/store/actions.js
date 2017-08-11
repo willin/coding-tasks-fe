@@ -15,6 +15,7 @@ const actions = {
     await dispatch('fetch', 'project');
     await dispatch('fetch', 'label');
     await dispatch('fetch', 'task');
+    await dispatch('fetch', 'tasklabels');
   }
 };
 
