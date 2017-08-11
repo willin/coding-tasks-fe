@@ -43,6 +43,14 @@ export default {
 
 <style lang="stylus">
 @import '../node_modules/vuetify/src/stylus/main'
+
+@font-face
+  font-family Coding
+  src url(https://dn-coding-net-production-static.qbox.me/static/f43a2f65f95e657abcdf212491ef50b8.eot)
+  src url(https://dn-coding-net-production-static.qbox.me/static/f43a2f65f95e657abcdf212491ef50b8.eot?#iefix) format('embedded-opentype'), url(https://dn-coding-net-production-static.qbox.me/static/5d0570de997f2f1207461e0dbf4c233e.woff) format('woff'), url(https://dn-coding-net-production-static.qbox.me/static/ad5ab4f799151646c2b217191693c451.ttf) format('truetype'), url(https://dn-coding-net-production-static.qbox.me/static/d3e5447f1f2a77fb3e59d454e5a76178.svg) format('svg')
+  font-weight 400
+  font-style normal
+
 .progress-linear{
   margin 0 !important
   position fixed
@@ -51,4 +59,11 @@ export default {
 }
 main
   padding-bottom 10px
+
+.coding
+  font-family Coding
+  &:before
+    content: '\c612'
+  &.important:before
+    content: '\c611'
 </style>
