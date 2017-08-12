@@ -10,7 +10,8 @@ module.exports = Object.assign({}, config, {
   devServer: {
     historyApiFallback: true,
     noInfo: true,
-    setup
+    setup,
+    port: 3933
   },
   performance: {
     hints: false

@@ -2,7 +2,7 @@
   <div class="flex">
     <div class="box">
       <v-card>
-        <v-toolbar class="pink lighten-2" dark>
+        <v-toolbar class="pink lighten-2" dark dense>
           <v-toolbar-title>重要且紧急</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-icon class="coding icon important"></v-icon>
@@ -14,7 +14,7 @@
     </div>
     <div class="box">
       <v-card>
-        <v-toolbar class="blue lighten-1" dark>
+        <v-toolbar class="blue lighten-1" dark dense>
           <v-toolbar-title>重要不紧急</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-icon class="coding icon important"></v-icon>
@@ -26,7 +26,7 @@
     </div>
     <div class="box">
       <v-card>
-        <v-toolbar class="yellow darken-2" dark>
+        <v-toolbar class="yellow darken-2" dark dense>
           <v-toolbar-title>紧急不重要</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-icon class="coding icon important"></v-icon>
@@ -38,7 +38,7 @@
     </div>
     <div class="box">
       <v-card>
-        <v-toolbar class="light-green lighten-3" dark>
+        <v-toolbar class="light-green lighten-3" dark dense>
           <v-toolbar-title>不紧急不重要</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-icon class="coding icon"></v-icon>
@@ -96,7 +96,12 @@ export default {
 .box
   width 49%
   height 49%
-  overflow-y scroll
+  overflow-y hidden
+  > div
+    height 100% !important
+    > ul
+      height calc(100% - 48px)
+      overflow-y scroll
 
 @media only screen and (max-width: 768px)
   .flex

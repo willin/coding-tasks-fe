@@ -39,7 +39,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        // exclude: /node_modules/,
+        include: [
+          path.resolve(__dirname, '../src'),
+          path.relative(__dirname, '../node_modules/vue-echarts')
+        ]
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
