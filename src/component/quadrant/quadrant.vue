@@ -66,19 +66,19 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'tasks'
+      'tasksUndone'
     ]),
     tasksp3() {
-      return this.tasks.filter(t => t.priority === 3).slice(0, 20);
+      return this.tasksUndone.where({ priority: 3 }).page({ page: 1, per: 50 });
     },
     tasksp2() {
-      return this.tasks.filter(t => t.priority === 2).slice(0, 20);
+      return this.tasksUndone.where({ priority: 2 }).page({ page: 1 });
     },
     tasksp1() {
-      return this.tasks.filter(t => t.priority === 1).slice(0, 20);
+      return this.tasksUndone.where({ priority: 1 }).page({ page: 1 });
     },
     tasksp0() {
-      return this.tasks.filter(t => t.priority === 0).slice(0, 20);
+      return this.tasksUndone.where({ priority: 0 }).page({ page: 1 });
     }
   }
 };
